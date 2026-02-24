@@ -1,0 +1,293 @@
+
+:root {
+  --dark-bg: #fbfdfc;
+  --darker-bg: #2e2e3a;
+  --gold: #c9a84c;
+  --gold-light: #d4b96a;
+  --white: #ffffff;
+  --text-muted-light: #c8c8d8;
+  --body-font: 'DM Sans', sans-serif;
+  --heading-font: 'Playfair Display', serif;
+  --pink:   #f8c8c8;
+  --green:  #d4edbb;
+  --yellow: #f5e4b0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--darker-bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 0;
+}
+
+.app-wrapper {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--dark-bg);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 480px) {
+  body { padding: 0; }
+  .app-wrapper { max-width: 100%; border-radius: 0; min-height: 100vh; }
+}
+
+/*  profile + stats Grid styling*/
+.profile-stats-section {
+  background-color: #44444f;
+  margin: 16px;
+  border-radius: 16px;
+  border: 1.5px solid var(--gold);
+  overflow: hidden;
+}
+
+.profile-inner {
+  padding: 20px 16px 14px 16px;
+  border: 1.5px solid var(--gold);
+  border-radius: 14px;
+  margin: 12px;
+}
+
+.profile-top-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.avatar-ring {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2.5px solid var(--gold);
+  padding: 3px;
+  flex-shrink: 0;
+  background: var(--gold);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-name-block {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 8px;
+}
+
+.profile-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.profile-message {
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.65;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.stats-grid { padding: 0 12px 14px; }
+
+.stat-card {
+  border-radius: 12px;
+  padding: 12px 12px 10px;
+  transition: transform 0.2s ease;
+  border: none;
+}
+
+.stat-card:hover { transform: translateY(-2px); }
+
+.stat-pink   { background-color: var(--pink); }
+.stat-green  { background-color: var(--green); }
+.stat-yellow { background-color: var(--yellow); }
+
+.stat-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+
+.stat-name {
+  font-size: 0.72rem;
+  color: #3a3a3a;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.stat-score {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #2a2a2a;
+  margin-top: 6px;
+}
+
+/* recommendaion syling*/
+.recommendation-section {
+  background-color: #44444f;
+  padding: 16px 20px 20px;
+  margin: 16px;
+  border-radius: 16px;
+  border: 1.5px solid var(--gold);
+  overflow: hidden;
+}
+
+.rec-title {
+  color: var(--gold);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.rec-highlight {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.rec-body {
+  font-size: 0.78rem;
+  color: var(--text-muted-light);
+  line-height: 1.75;
+  font-weight: 800;
+}
+
+/* membership cards styling */
+.membership-section {
+  background-color: var(--dark-bg);
+  padding: 0 16px 16px;
+}
+
+.membership-card {
+  background-color: #44444f;
+  border: 1px solid #55556a;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease;
+}
+
+.membership-card:hover { box-shadow: 0 4px 20px rgba(201,168,76,0.2); }
+
+.membership-header-1 {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  background-color:#988b27;
+  border-bottom: 1px solid transparent;
+}
+.membership-header-2 {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  background-color:#4a7d9c;
+  border-bottom: 1px solid transparent;
+}
+
+.membership-card.active .membership-header { border-bottom-color: #55556a; }
+
+.membership-label-bold {
+  color: whitesmoke;
+  font-weight: 900;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.membership-label-thin {
+  color: var(--text-muted-light);
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.toggle-arrow {
+  margin-left: auto;
+  color: var(--gold);
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.membership-card.active .toggle-arrow { transform: rotate(180deg); }
+
+.membership-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 16px;
+}
+
+.membership-card.active .membership-body {
+  max-height: 200px;
+  padding: 14px 16px;
+}
+
+.membership-body p {
+  font-size: 0.78rem;
+  color: var(--text-muted-light);
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 800;
+}
+
+/* details link styling */
+.details-link-section {
+  background-color: var(--dark-bg);
+  padding: 8px 16px 20px;
+  text-align: center;
+}
+
+.details-link {
+  display: inline-block;
+  background-color: rgb(154, 133, 16);
+  color: whitesmoke;
+  font-size: 0.73rem;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--gold);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.details-link:hover {
+  background-color: goldenrod;
+  color: var(--dark-bg);
+  font-weight: 600;
+}
+
+/* footer styling*/
+.app-footer { background-color: var(--gold); padding: 12px 16px; }
+
+.footer-text { font-size: 0.63rem; color: #fdfcfc; font-weight: 600; }
+
+.whatsapp-btn {
+  width: 42px;
+  height: 42px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(37,211,102,0.4);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.whatsapp-btn:hover { transform: scale(1.1); }

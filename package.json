@@ -1,0 +1,21 @@
+{
+  "name": "investment-knowledge-club-portal",
+  "version": "1.0.0",
+  "description": "This project is a re-creation of a membership selection interface for an investment knowledge club. The goal was to build a fully responsive, clean, and interactive UI based on provided design requirements.\r ### Project Source",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavisNoah02/invesment-knowledge-club-ui-four-front-assign-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DavisNoah02/invesment-knowledge-club-ui-four-front-assign-/issues"
+  },
+  "homepage": "https://github.com/DavisNoah02/invesment-knowledge-club-ui-four-front-assign-#readme"
+}
