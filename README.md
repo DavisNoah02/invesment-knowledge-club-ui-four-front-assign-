@@ -29,7 +29,21 @@ The requirements for this assessment were provided in the official [Frontend Sub
     
 -   **Bootstrap 5**: Utilizes for the grid system and core UI components.
     
-
+### Project Structure
+```
+investment-club/
+├── js/
+│   └── main.js
+├── public/
+│   └── noah.jpeg
+├── reference-doc/
+│   └── Frontend Submission.pdf
+├── styles/
+│   └── style.css
+├── index.html
+├── package.json
+└── README.md
+```
 ### How to Run
 
 1.  Clone the repository: `git clone https://github.com/DavisNoah02/invesment-knowledge-club-ui-four-front-assign-.git`
