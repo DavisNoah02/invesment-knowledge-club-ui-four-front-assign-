@@ -29,3 +29,26 @@ document.querySelectorAll('.membership-card').forEach(function(card) {
   });
 });
 
+// animate count for stats
+function animateCount(el, target, duration) {
+  let start = 0;
+  const step = Math.ceil(target / (duration / 16));
+
+  const timer = setInterval(function() {
+    start += step;
+    if (start >= target) {
+      el.textContent = target;
+      clearInterval(timer);
+    } else {
+      el.textContent = start;
+    }
+  }, 16);
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.stat-score').forEach(function(el) {
+    const finalValue = parseInt(el.textContent, 10);
+    el.textContent = '0';
+    animateCount(el, finalValue, 800);
+  });
+});
